@@ -27,6 +27,7 @@
   body {
     color: var(--text-color);
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
   }
 
   :root {
@@ -187,7 +188,7 @@
     padding: 10px;
   }
   
-  footer p {
+  footer span {
     font-size: 14px;
   }
   

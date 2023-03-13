@@ -26,6 +26,7 @@
   body {
 	color: var(--text-color);
 	background: var(--bg-color);
+	overflow-x: hidden;
   }
 
   .logo{
@@ -252,9 +253,10 @@
 	color: #fff;
 	text-align: center;
 	padding: 10px;
+	color: var(--main-color);
   }
   
-  footer p {
+  footer span {
 	font-size: 14px;
   }
   

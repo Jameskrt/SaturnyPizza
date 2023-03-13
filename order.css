@@ -25,6 +25,7 @@ body {
     color: var(--text-color);
 	background: var(--bg-color);
 	font-family: Arial, sans-serif;
+	overflow-x: hidden;
 }
 
 .container {
@@ -191,4 +192,15 @@ button:hover[type="submit"] {
 	transition: .4s;
 	transition: all 0.4s ease;
 	cursor: pointer;
+  }
+
+  footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+  }
+  
+  footer p {
+	font-size: 14px;
   }
