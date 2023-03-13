@@ -77,14 +77,20 @@
   
   header {
     background-color: rgb(0, 0, 0);
-    padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+	  top: 0;
+	  padding: 10px;
   }
   
   header h1 {
-    font-size: 48px;
+    font-size: 40px;
     text-align: center;
-    color: #333;
+    margin-bottom: 50px;
+    color: var(--main-color);
+    position: absolute;
+    right: 40%;
+    margin-top: 50px;
   }
   
   /* Navigation */

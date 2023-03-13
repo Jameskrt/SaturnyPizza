@@ -1,100 +1,145 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Order Page | Saturny Pizza</title>
-	<link rel="shortcut icon" href="saturnylogo.png" type="image/png">
-	<link rel="stylesheet" type="text/css" href="order.css">
-	<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="order.js"></script>
-</head>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Order Page | Saturny Pizza</title>
+		<link rel="shortcut icon" href="saturnylogo.png" type="image/png">
+		<link rel="stylesheet" type="text/css" href="order.css">
+		<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="order.js"></script>
+	</head>
 
-<body>
-        <header>
-            <a href="index.html" class="logo"><img src="White Modern Pizza Brand, Circular Logo.png" alt="Saturny Pizza logo"> Saturny Pizza</a>
-        </header>
+	<body>
+			<header>
+				<div class="logotitle">
+					<h1>Saturny Pizza</h1>
+				</div>
+				<a href="index.html" class="logo"><img src="White Modern Pizza Brand, Circular Logo.png" alt="Saturny Pizza logo"></a>
+			</header>
 
-		<nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="menu.html">Menu</a>
+				<a href="about.html">About Us</a>
+				<a href="contact.html">Contact</a>
+			</nav>
 
-	<div class="container">
-		<h1>Place Your Order</h1>
+		<div class="container">
+			<h1>Place Your Order</h1>
 
-		<form id="order-form" method="post">
+			<form id="order-form" method="post">
 
-			<div class="form-group">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" required>
-			</div>
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required>
+				</div>
 
-			<div class="form-group">
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required>
-			</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
 
-			<div class="form-group">
-				<label for="phone">Phone Number:</label>
-				<input type="tel" id="phone" name="phone" pattern="[09]-{10}" required>
-			</div>
+				<div class="form-group">
+					<label for="phone">Phone Number:</label>
+					<input type="tel" id="phone" name="phone" pattern="[09]-{10}" required>
+				</div>
 
-			<div class="form-group">
-				<label for="address">Address:</label>
-				<textarea id="address" name="address" rows="4" cols="50" required></textarea>
-			</div>
+				<div class="form-group">
+					<label for="address">Address:</label>
+					<textarea id="address" name="address" rows="4" cols="50" required></textarea>
+				</div>
 
-			<h2>Menu</h2>
+				<h2>Pizza Menu:</h2>
 
-			<div class="menu-item">
-				<img src="https://buddhapizza.od.ua/storage/products/CkKZCZgXIQNuEooQcL0hynpSn6zrX68HGq7TQLD0.jpeg" alt="Premium pizza">
-				<h3>Premium pizza</h3>
-				<p>₱380</p>
-				<label for="pizza-quantity">Quantity:</label>
-				<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
-			</div>
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/CkKZCZgXIQNuEooQcL0hynpSn6zrX68HGq7TQLD0.jpeg" alt="Premium pizza">
+					<h3>Premium pizza</h3>
+					<p>₱380</p>
+					<label for="pizza-quantity">Quantity:</label>
+					<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
+				</div>
 
-			<div class="menu-item">
-				<img src="https://buddhapizza.od.ua/storage/products/kJQkPbUDxEA8uKasK3WLgB4goag8bC6a8ZSjIHnv.jpeg" alt="Multi meat">
-				<h3>Multi meat</h3>
-				<p>₱370</p>
-				<label for="pizza-quantity">Quantity:</label>
-				<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
-			</div>
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/kJQkPbUDxEA8uKasK3WLgB4goag8bC6a8ZSjIHnv.jpeg" alt="Multi meat">
+					<h3>Multi meat</h3>
+					<p>₱370</p>
+					<label for="pizza-quantity">Quantity:</label>
+					<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
+				</div>
 
-			<div class="menu-item">
-				<img src="https://buddhapizza.od.ua/storage/products/jgaXh2A4jVwLTXkTKBDIgFHZkgm06YF3g3Sva78a.jpeg" alt="With salmon and spinach">
-				<h3>With salmon and spinach</h3>
-				<p>₱500</p>
-				<label for="pizza-quantity">Quantity:</label>
-				<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
-			</div>
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/jgaXh2A4jVwLTXkTKBDIgFHZkgm06YF3g3Sva78a.jpeg" alt="With salmon and spinach">
+					<h3>With salmon and spinach</h3>
+					<p>₱500</p>
+					<label for="pizza-quantity">Quantity:</label>
+					<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
+				</div>
 
-			<div class="menu-item">
-				<img src="https://buddhapizza.od.ua/storage/products/nDyr9frV13kYv8N1tWAv0hkK12QBORPIB0ySz6Nr.jpeg" alt="Marrakech">
-				<h3>Marrakech</h3>
-				<p>₱450</p>
-				<label for="pizza-quantity">Quantity:</label>
-				<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
-			</div>
-			
-			<div class="menu-item">
-				<img src="https://buddhapizza.od.ua/storage/products/NwTuoBDe5wTojPN1RKtZR961YnFL65gQXBAaxdyr.jpeg" alt="Holy mollusks">
-				<h3>Holy mollusks</h3>
-				<p>₱380</p>
-				<label for="pizza-quantity">Quantity:</label>
-				<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
-			</div>
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/nDyr9frV13kYv8N1tWAv0hkK12QBORPIB0ySz6Nr.jpeg" alt="Marrakech">
+					<h3>Marrakech</h3>
+					<p>₱450</p>
+					<label for="pizza-quantity">Quantity:</label>
+					<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
+				</div>
+				
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/NwTuoBDe5wTojPN1RKtZR961YnFL65gQXBAaxdyr.jpeg" alt="Holy mollusks">
+					<h3>Holy mollusks</h3>
+					<p>₱380</p>
+					<label for="pizza-quantity">Quantity:</label>
+					<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
+				</div>
 
-			<h2>Total Cost: $<span id="total-cost">0.00</span></h2>
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/kzBGWLG7WJDQ1PxYRBmdFyVhETHJrcWnJgUTbO39.jpeg" alt="Salami">
+					<h3>Salami</h3>
+					<p>₱250</p>
+					<label for="pizza-quantity">Quantity:</label>
+					<input type="number" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="0">
+				</div>
 
-			<button type="submit">Place Order</button>
-		</form>
-	</div>
+				<h2>Drinks Menu:</h2>
 
-</body>
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/VZim4KtGgiAHX22b6B5AIzsmB8DBH9AHmN0QTpuU.jpeg" alt="coke">
+					<h3>Coca-Cola</h3>
+					<p>₱59</p>
+					<label for="drinks-quantity">Quantity:</label>
+					<input type="number" id="drinks-quantity" name="drinks-quantity" min="1" max="10" value="0">
+				</div>
+
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/Y8rprVvVezn4IOLwW5WNi3LaVvxAx4cTDkbWQYiG.jpeg" alt="Burn">
+					<h3>Burn</h3>
+					<p>₱56</p>
+					<label for="drinks-quantity">Quantity:</label>
+					<input type="number" id="drinks-quantity" name="drinks-quantity" min="1" max="10" value="0">
+				</div>
+
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/judoOB5pTzqM0uPanDDlIh3bER0McfA91LnaqYSc.png" alt="Basilic">
+					<h3>Basilic lemonade</h3>
+					<p>₱50</p>
+					<label for="drinks-quantity">Quantity:</label>
+					<input type="number" id="drinks-quantity" name="drinks-quantity" min="1" max="10" value="0">
+				</div>
+
+				<div class="menu-item">
+					<img src="https://buddhapizza.od.ua/storage/products/i1lJAG73gQI0Ii0ctpDXEr4YDQDhTnu9zj0soHTa.jpeg" alt="Rich juice">
+					<h3>Rich juice</h3>
+					<p>₱60</p>
+					<label for="drinks-quantity">Quantity:</label>
+					<input type="number" id="drinks-quantity" name="drinks-quantity" min="1" max="10" value="0">
+				</div>
+
+				<h2>Total Cost: $<span id="total-cost">0.00</span></h2>
+
+				<button type="submit">Place Order</button>
+			</form>
+		</div>
+
+	</body>
 </html>

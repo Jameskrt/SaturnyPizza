@@ -28,10 +28,11 @@
 	background: var(--bg-color);
   }
 
-  .logo {
-	color: var(--main-color);
-	font-weight: 600;
-	font-size: 2.5rem;
+  .logo{
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding: 10px 20px;
   }
 
   .pizza1-img img, .pizza2-img img, .pizza3-img img, .pizza4-img img, .pizza5-img, .pizza6-img {
@@ -67,46 +68,52 @@
   
   header {
 	background-color: rgb(0, 0, 0);
-	padding: 20px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	margin-bottom: 10px;
+	position: sticky;
+	top: 0;
+	padding: 10px;
   }
   
   header h1 {
-	font-size: 48px;
+	font-size: 40px;
 	text-align: center;
-	color: #333;
+	margin-bottom: 50px;
+	color: var(--main-color);
+	position: absolute;
+	right: 40%;
+	margin-top: 50px;
   }
   
   /* Navigation */
   
   nav {
-	display: flex; /* make the links a flex container */
+	display: flex;
+	background-color: black;
+	padding: 20px;
   }
   
   nav a {
-	display: inline-block;
-	padding: 10px 130px;
-	align-items: center;
-	margin-right: 10px;
-	font-size: 16px;
-	font-weight: 500;
-	border-radius: 5px;
-	color: black;
-	background: var(--main-color);
+    display: inline-block;
+    padding: 10px 125px;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    background: var(--main-color);
+    border-radius: 5px;
   }
 
-  nav:hover{
-	color: red;
-	transform: scale(1.0) translateY(1px);
-	transition: .4s;
+  nav a:hover {
+    transform: scale(1.2) translateY(10px);
+    transition: .4s;
+    color: navy;
   }
   
-  nav a:hover {
-	transform: scale(1.2) translateY(10px);
-	transition: .4s;
-	color: #3e329a;
-	transition: .4s;
+  nav:hover{
+    color: red;
+    transform: scale(1.0) translateY(10px);
+    transition: .4s;
   }
   
   #menu-icon {
