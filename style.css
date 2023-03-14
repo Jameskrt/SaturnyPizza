@@ -34,6 +34,7 @@
     font-weight: 600;
     font-size: 2.5rem;
     padding: 10px 20px;
+	position: relative;
   }
 
   .pizza1-img img, .pizza2-img img, .pizza3-img img, .pizza4-img img, .pizza5-img, .pizza6-img {
@@ -83,6 +84,7 @@
 	position: absolute;
 	right: 40%;
 	margin-top: 50px;
+
   }
   
   /* Navigation */
@@ -91,6 +93,7 @@
 	display: flex;
 	background-color: black;
 	padding: 20px;
+	position: relative;
   }
   
   nav a {
@@ -98,11 +101,13 @@
     padding: 10px 125px;
     align-items: center;
     margin-right: 10px;
+	position: relative;
     font-size: 16px;
     font-weight: 500;
     color: black;
     background: var(--main-color);
     border-radius: 5px;
+
   }
 
   nav a:hover {
