@@ -22,6 +22,7 @@
 }
 
 body {
+	scroll-behavior: smooth;
     color: var(--text-color);
 	background: var(--bg-color);
 	font-family: Arial, sans-serif;
