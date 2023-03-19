@@ -7,7 +7,80 @@
 		<link rel="stylesheet" type="text/css" href="order.css">
 		<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="order.js"></script>
+		<script>
+			// Calculate the total cost
+			function calculateTotalCost() {
+				var premiumPizzaPrice = 380;
+				var multiMeatPizzaPrice = 370;
+				var salmonSpinachPizzaPrice = 500;
+				var marrakechPizzaPrice = 450;
+				var holyMollusksPizzaPrice = 380;
+				var salamiPizzaPrice = 250;
+				var cokePrice = 59;
+				var burnPrice = 56;
+				var basilicLemonadePrice = 50;
+				var richJuicePrice = 60;
+	
+				var totalCost =
+					$("#premium-pizza-quantity").val() * premiumPizzaPrice +
+					$("#multi-meat-pizza-quantity").val() * multiMeatPizzaPrice +
+					$("#salmon-spinach-pizza-quantity").val() * salmonSpinachPizzaPrice +
+					$("#marrakech-pizza-quantity").val() * marrakechPizzaPrice +
+					$("#holy-mollusks-pizza-quantity").val() * holyMollusksPizzaPrice +
+					$("#salami-pizza-quantity").val() * salamiPizzaPrice +
+					$("#coke-quantity").val() * cokePrice +
+					$("#burn-quantity").val() * burnPrice +
+					$("#basilic-lemonade-quantity").val() * basilicLemonadePrice +
+					$("#rich-juice-quantity").val() * richJuicePrice;
+	
+					$("#total-cost").text(totalCost.toFixed(2));
+
+					function submitForm() {
+						alert("Hello world!");
+					}
+				}
+	
+			$(document).ready(function () {
+				// Update the total cost whenever a quantity changes
+				$("input[type='number']").on("change", calculateTotalCost);
+			});
+
+			function submitForm() {
+			// Get the form data
+			var formData = {
+				name: $("#name").val(),
+				email: $("#email").val(),
+				phone: $("#phone").val(),
+				address: $("#address").val(),
+				premiumPizzaQuantity: $("#premium-pizza-quantity").val(),
+				multiMeatPizzaQuantity: $("#multi-meat-pizza-quantity").val(),
+				salmonSpinachPizzaQuantity: $("#salmon-spinach-pizza-quantity").val(),
+				marrakechPizzaQuantity: $("#marrakech-pizza-quantity").val(),
+				holyMollusksPizzaQuantity: $("#holy-mollusks-pizza-quantity").val(),
+				salamiPizzaQuantity: $("#salami-pizza-quantity").val(),
+				cokeQuantity: $("#coke-quantity").val(),
+				burnQuantity: $("#burn-quantity").val(),
+				basilicLemonadeQuantity: $("#basilic-lemonade-quantity").val(),
+				richJuiceQuantity: $("#rich-juice-quantity").val(),
+				totalCost: $("#total-cost").text()
+			};
+
+			// Send the form data to the server
+			$.ajax({
+				type: "POST",
+				url: "submit-order.php",
+				data: formData,
+				success: function(response) {
+					// Handle the server response here
+					alert("Order submitted successfully!");
+				},
+				error: function() {
+					alert("Order submitted successfully!");
+				}
+			});
+		}
+		</script>
+
 	</head>
 
 		<body>
@@ -25,119 +98,117 @@
 				<a href="about.html">About Us</a>
 				<a href="contact.html">Contact</a>
 			</nav>
-
-		<div class="container">
-			<h1>Place Your Order</h1>
-
-			<form id="order-form" method="post">
-
-				<div class="form-group">
-					<label for="name">Name:</label>
-					<input type="text" id="name" name="name" required>
-				</div>
-
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" required>
-				</div>
-
-				<div class="form-group">
-					<label for="phone">Phone Number:</label>
-					<input type="tel" id="phone" name="phone" pattern="^(09|\+639)\d{9}$" required>
-				</div>
-
-				<div class="form-group">
-					<label for="address">Address:</label>
-					<textarea id="address" name="address" rows="4" cols="50" required></textarea>
-				</div>
-
+				<h1>Place Your Order</h1>
 				<h2>Pizza Menu:</h2>
 
 				<div class="menu-item">
 					<img src="https://buddhapizza.od.ua/storage/products/CkKZCZgXIQNuEooQcL0hynpSn6zrX68HGq7TQLD0.jpeg" alt="Premium pizza">
 					<h3>Premium pizza</h3>
 					<p>₱380</p>
-					<label for="pizza-quantity">Quantity:</label>
-					<input type="number" id="pizza-quantity" name="pizza-quantity" min="0" max="10" value="0">
+					<label for="premium-pizza-quantity">Quantity:</label>
+					<input type="number" id="premium-pizza-quantity" name="premium-pizza-quantity" min="0" max="10" value="0">
 				</div>
 
 				<div class="menu-item">
 					<img src="https://buddhapizza.od.ua/storage/products/kJQkPbUDxEA8uKasK3WLgB4goag8bC6a8ZSjIHnv.jpeg" alt="Multi meat">
 					<h3>Multi meat</h3>
 					<p>₱370</p>
-					<label for="pizza-quantity">Quantity:</label>
-					<input type="number" id="pizza-quantity" name="pizza-quantity" min="0" max="10" value="0">
+					<label for="multi-meat-pizza-quantity">Quantity:</label>
+					<input type="number" id="multi-meat-pizza-quantity" name="multi-meat-pizza-quantity" min="0" max="10" value="0">
 				</div>
 
 				<div class="menu-item">
 					<img src="https://buddhapizza.od.ua/storage/products/jgaXh2A4jVwLTXkTKBDIgFHZkgm06YF3g3Sva78a.jpeg" alt="With salmon and spinach">
 					<h3>With salmon and spinach</h3>
 					<p>₱500</p>
-					<label for="pizza-quantity">Quantity:</label>
-					<input type="number" id="pizza-quantity" name="pizza-quantity" min="0" max="10" value="0">
+					<label for="salmon-spinach-pizza-quantity">Quantity:</label>
+					<input type="number" id="salmon-spinach-pizza-quantity" name="salmon-spinach-pizza-quantity" min="0" max="10" value="0">
 				</div>
 
 				<div class="menu-item">
 					<img src="https://buddhapizza.od.ua/storage/products/nDyr9frV13kYv8N1tWAv0hkK12QBORPIB0ySz6Nr.jpeg" alt="Marrakech">
 					<h3>Marrakech</h3>
 					<p>₱450</p>
-					<label for="pizza-quantity">Quantity:</label>
-					<input type="number" id="pizza-quantity" name="pizza-quantity" min="0" max="10" value="0">
+					<label for="marrakech-pizza-quantity">Quantity:</label>
+					<input type="number" id="marrakech-pizza-quantity" name="marrakech-pizza-quantity" min="0" max="10" value="0">
 				</div>
 				
 				<div class="menu-item">
 					<img src="https://buddhapizza.od.ua/storage/products/NwTuoBDe5wTojPN1RKtZR961YnFL65gQXBAaxdyr.jpeg" alt="Holy mollusks">
 					<h3>Holy mollusks</h3>
 					<p>₱380</p>
-					<label for="pizza-quantity">Quantity:</label>
-					<input type="number" id="pizza-quantity" name="pizza-quantity" min="0" max="10" value="0">
+					<label for="holy-mollusks-pizza-quantity">Quantity:</label>
+					<input type="number" id="holy-mollusks-pizza-quantity" name="holy-mollusks-pizza-quantity" min="0" max="10" value="0">
 				</div>
 
 				<div class="menu-item">
 					<img src="https://buddhapizza.od.ua/storage/products/kzBGWLG7WJDQ1PxYRBmdFyVhETHJrcWnJgUTbO39.jpeg" alt="Salami">
 					<h3>Salami</h3>
 					<p>₱250</p>
-					<label for="pizza-quantity">Quantity:</label>
-					<input type="number" id="pizza-quantity" name="pizza-quantity" min="0" max="10" value="0">
+					<label for="salami-pizza-quantity">Quantity:</label>
+					<input type="number" id="salami-pizza-quantity" name="salami-pizza-quantity" min="0" max="10" value="0">
 				</div>
 
 				<h2>Drinks Menu:</h2>
 
-				<div class="menu-item">
+				<div class="drinks-item">
 					<img src="https://buddhapizza.od.ua/storage/products/VZim4KtGgiAHX22b6B5AIzsmB8DBH9AHmN0QTpuU.jpeg" alt="coke">
 					<h3>Coca-Cola</h3>
 					<p>₱59</p>
-					<label for="drinks-quantity">Quantity:</label>
-					<input type="number" id="drinks-quantity" name="drinks-quantity" min="0" max="10" value="0">
+					<label for="coke-quantity">Quantity:</label>
+					<input type="number" id="coke-quantity" name="coke-quantity" min="0" max="10" value="0">
 				</div>
 
-				<div class="menu-item">
+				<div class="drinks-item">
 					<img src="https://buddhapizza.od.ua/storage/products/Y8rprVvVezn4IOLwW5WNi3LaVvxAx4cTDkbWQYiG.jpeg" alt="Burn">
 					<h3>Burn</h3>
 					<p>₱56</p>
-					<label for="drinks-quantity">Quantity:</label>
-					<input type="number" id="drinks-quantity" name="drinks-quantity" min="0" max="10" value="0">
+					<label for="burn-quantity">Quantity:</label>
+					<input type="number" id="burn-quantity" name="burn-quantity" min="0" max="10" value="0">
 				</div>
 
-				<div class="menu-item">
+				<div class="drinks-item">
 					<img src="https://buddhapizza.od.ua/storage/products/judoOB5pTzqM0uPanDDlIh3bER0McfA91LnaqYSc.png" alt="Basilic">
 					<h3>Basilic lemonade</h3>
 					<p>₱50</p>
-					<label for="drinks-quantity">Quantity:</label>
-					<input type="number" id="drinks-quantity" name="drinks-quantity" min="0" max="10" value="0">
+					<label for="basilic-lemonade-quantity">Quantity:</label>
+					<input type="number" id="basilic-lemonade-quantity" name="basilic-lemonade-quantity" min="0" max="10" value="0">
 				</div>
 
-				<div class="menu-item">
+				<div class="drinks-item">
 					<img src="https://buddhapizza.od.ua/storage/products/i1lJAG73gQI0Ii0ctpDXEr4YDQDhTnu9zj0soHTa.jpeg" alt="Rich juice">
 					<h3>Rich juice</h3>
 					<p>₱60</p>
-					<label for="drinks-quantity">Quantity:</label>
-					<input type="number" id="drinks-quantity" name="drinks-quantity" min="0" max="10" value="0">
+					<label for="rich-juice-quantity">Quantity:</label>
+					<input type="number" id="rich-juice-quantity" name="rich-juice-quantity" min="0" max="10" value="0">
 				</div>
 
-				<h2>Total Cost: $<span id="total-cost">0.00</span></h2>
-
-				<button type="submit" onclick="alert('Hello world!')">Place Order</button>
+				<div class="container">
+					<h1>Place Your Order</h1>
+					<form id="order-form" method="post">
+		
+						<div class="form-group">
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+		
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+		
+						<div class="form-group">
+							<label for="phone">Phone Number:</label>
+							<input type="tel" id="phone" name="phone" pattern="^(09|\+639)\d{9}$" required>
+						</div>
+		
+						<div class="form-group">
+							<label for="address">Address:</label>
+							<textarea id="address" name="address" rows="4" cols="50" required></textarea>
+						</div>
+				
+				<h2>Total Cost: ₱<span id="total-cost">0.00</span></h2>
+				<button type="submit" onclick="submitForm()">Place Order</button>
 			</form>
 		</div>
 

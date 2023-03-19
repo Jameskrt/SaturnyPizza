@@ -102,7 +102,7 @@ h1 {
 	font-size: 30px;
 	text-align: center;
 	margin-bottom: 30px;
-    color: black;
+    color: white;
     background: var(--main-color);
 	border-radius: 5px;
 }
@@ -140,6 +140,28 @@ input[type="number"] {
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
+}
+
+.drinks-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.drinks-item img {
+	max-width: 60px;
+	margin-right: 20px;
+	border-radius: 5px 10px;
+}
+
+.drinks-item h3 {
+	font-size: 16px;
+	margin: 0;
+}
+
+.drinks-item p {
+	font-size: 18px;
+	margin: 0 0 0 auto;
 }
 
 .menu-item img {
