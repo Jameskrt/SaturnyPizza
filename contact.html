@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Contact | Saturny Pizza</title>
         <link rel="shortcut icon" href="Pagelogo.png" type="image/png">
         <link rel="stylesheet" href="about.css">
-        <link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
     </head>
     
     <body>
-        <header id="top">
+        <header class="header" id="top">
             <div class="logotitle">
                 <a href="index.html">
-                <h1>Saturny Pizza</h1></a>
+                    <h1>Saturny Pizza</h1>
+                </a>
             </div>
-            <a href="index.html" class="logo"><img src="White Modern Pizza Brand, Circular Logo.png" alt="Saturny Pizza logo"></a>
+            <a href="index.html" class="logo">
+                <img src="White Modern Pizza Brand, Circular Logo.png" alt="Saturny Pizza logo">
+            </a>
         </header>
     
-        <nav>
+        <nav class="navigation">
             <a href="index.html">Home</a>
             <a href="menu.html">Menu</a>
             <a href="about.html">About Us</a>
@@ -37,26 +40,29 @@
                     <li>Phone: 09560951744</li>
                     <li>Email: SaturnyPizza@gmail.com</li>
                 </ul>
-                <br>
                 <form action="#" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br>
+                    <fieldset>
+                        <legend>Get in touch</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
             
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br>
-                    <br>
-                    <br>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Your message..." required></textarea>
             
-                    <input type="submit" value="Submit">
+                        <input type="submit" value="Submit">
+                    </fieldset>
                 </form>
 
             </section>
         </main>
         
-        <footer>
-            <a href="https://www.facebook.com/SaturnyP/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/49/49354.png" alt="Facebook logo" width="40" height="40"></a><br>
+        <footer class="footer">
+            <a href="https://www.facebook.com/SaturnyP/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/49/49354.png" alt="Facebook logo" width="40" height="40">
+            </a><br>
             <span>&copy; 2023 - Saturny Pizza. - All rights reserved.</span>
         </footer>
 
