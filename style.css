@@ -94,21 +94,20 @@
 	background-color: black;
 	padding: 20px;
 	position: relative;
+	grid-template-columns: repeat(auto-fill, minmax(150px ,1fr));
   }
   
   nav a {
-    display: inline-block;
-    padding: 10px 125px;
-    align-items: center;
-    margin-right: 10px;
-	left: 10px;
+	padding: 10px 125px;
+	text-align: center;
 	position: relative;
-    font-size: 16px;
-    font-weight: 500;
+	margin-left: 20px;
+	left: 10px;
+	right: center;
+    font-size: 12px;
     color: black;
     background: var(--main-color);
-    border-radius: 5px;
-
+    border-radius: 1rem;
   }
 
   nav a:hover {
@@ -231,6 +230,10 @@
 
   form button {
 	margin-left: 10px;
+	padding: 5px 10px;
+	height: 50%;
+	font-size: 12px;
+	margin-top: 20px;
   }
   
   button:hover {

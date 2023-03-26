@@ -26,11 +26,19 @@
         </nav>
 
         <div class="button">
-            <form>
-                <input type="search" placeholder="Search" aria-label="Search">
-                <button type="submit">Search</button>
+            <form id="search-form">
+                <input type="search" name="query" placeholder="Search here..." aria-label="Search" list="suggestions">
+                    <datalist id="suggestions">
+                    <option value="Premium cheese">
+                    <option value="Multi meat">
+                    <option value="With salmon and spinach">
+                    <option value="Marrakech">
+                    <option value="Holy mollusks">
+                    <option value="Salami">
+                    </datalist>
+                <button type="submit" id="search-button">Search</button>
             </form>
-        </div>
+        </div>        
 
         <main>
             <h1>Welcome to Saturny Pizza Restaurant!</h1>
@@ -118,6 +126,33 @@
             <span>&copy; 2023 - Saturny Pizza. - All rights reserved.</span>
         </footer>
 
-    </body>
-
+        <script>
+            // Get the search input field, search button, search form, and the articles to search
+            const searchInput = document.querySelector('input[type="search"]');
+            const searchButton = document.getElementById('search-button');
+            const searchForm = document.getElementById('search-form');
+            const articles = document.querySelectorAll('article');
+        
+            // Function to perform the search
+            function performSearch(event) {
+                event.preventDefault();
+        
+                // Get the search query and convert to lowercase
+                const query = searchInput.value.toLowerCase();
+        
+                // Loop through the articles and hide those that don't match the query
+                articles.forEach(article => {
+                    const title = article.querySelector('h2').textContent.toLowerCase();
+                    if (title.includes(query)) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            }
+        
+            // Listen for submit event on the search form
+            searchForm.addEventListener('submit', performSearch);
+        </script>
+    </body>                
 </html>
