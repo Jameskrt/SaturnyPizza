@@ -20,50 +20,69 @@
                 </a>
             </div>
             <a href="index.html" class="logo">
-                <img src="White Modern Pizza Brand, Circular Logo.png" alt="Saturny Pizza logo">
+                <img src="logo.png" alt="Saturny Pizza logo">
             </a>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </header>
-    
-        <nav class="navigation">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
         
         <main>
-            <section>
-                <h2>Contact Us</h2>
-                <p>Feel free to get in touch with us via phone, email or by filling out the contact form below:</p>
-
-                <ul>
-                    <li>Phone: 09560951744</li>
-                    <li>Email: SaturnyPizza@gmail.com</li>
-                </ul>
-                <form action="#" method="post">
-                    <fieldset>
-                        <legend>Get in touch</legend>
+            <section class="contact-container">
+                <div class="contact-form">
+                    <h3>Comments and Suggestions</h3>
+                    <form action="#" method="post">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" required>
-            
+                
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
-                        
+                            
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" placeholder="Your message..." required></textarea>
-            
-                        <input type="submit" value="Submit">
-                    </fieldset>
-                </form>
+                
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
 
+                <div class="contact-details">
+                    <h3>Address</h3>
+                    <p>Email: contact@saturnypizza.com</p>
+                    <p>Phone: 09560951744</p>
+                    <p>Tel #: 0755235660</p>
+                    <h3>Location Map</h3>
+                    <img src="locationMap.png" alt="Location Map">
+                </div>
             </section>
         </main>
+
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+            async
+            defer
+        ></script>
+        <script>
+            function initMap() {
+                const location = { lat: 15.827988, lng: 120.441559 }; // Replace with your desired location
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15,
+                    center: location,
+                });
+                const marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                });
+            }
+        </script>
         
-        <footer class="footer">
-            <a href="https://www.facebook.com/SaturnyP/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/49/49354.png" alt="Facebook logo" width="40" height="40">
-            </a><br>
-            <span>&copy; 2023 - Saturny Pizza. - All rights reserved.</span>
+        <footer>
+            <span>&copy; 2023 - Saturny Pizza. - All rights reserved.</span><br><br>
+            <a href="https://www.facebook.com/SaturnyP/" target="_blank"><i class='bx bxl-facebook-square bx-tada' alt="Facebook logo"></a></i>
+            <a href="https://instagram.com/jameskrrt?igshid=ZDdkNTZiNTM=" target="_blank"><i class='bx bxl-instagram-alt bx-tada' alt="Instagram logo"></a></i>
+            <a href="https://twitter.com/Jameskrrt" target="_blank"><i class='bx bxl-twitter bx-tada' alt="Twitter logo"></a></i>
         </footer>
 
     </body>

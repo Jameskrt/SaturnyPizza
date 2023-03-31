@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Menu | Saturny Pizza</title>
         <link rel="shortcut icon" href="Pagelogo.png" type="image/png">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="menu.css">
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,261 +15,83 @@
         <header id="top">
             <a href="index.html">
             <h1>Saturny Pizza</h1></a>
-            <a href="index.html" class="logo"><img src="White Modern Pizza Brand, Circular Logo.png" alt="Saturny Pizza logo"></a>
+            <a href="index.html" class="logo"><img src="logo.png" alt="Saturny Pizza logo"></a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </header>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <div class="button">
-            <form id="search-form">
-                <input type="search" name="query" placeholder="Search here..." aria-label="Search" list="suggestions">
-                    <datalist id="suggestions">
-                    <option value="Premium cheese">
-                    <option value="Multi meat">
-                    <option value="Coca-Cola">
-                    <option value="With salmon and spinach">
-                    <option value="Ginebra San Miguel Gin">
-                    <option value="Marrakech">
-                    <option value="Holy mollusks">
-                    <option value="Salami">
-                    </datalist>
-                <button type="submit" id="search-button">Search</button>
-            </form>
-        </div>
 
         <main>
             <section>
+                <div class="menu-coontainer">
+                <div class="pizza-category">
+                    <ul>
+                        <h1>Pizza Category</h1>
+                        <li><a href="#pizza1"><h3>Premium cheese</h3></a></li>
+                        <li><a href="#pizza2"><h3>Multi meat</h3></a></li>
+                        <li><a href="#pizza3"><h3>With salmon and spinach</h3></a></li>
+                        <li><a href="#pizza4"><h3>Marrakech</h3></a></li>
+                        <li><a href="#pizza5"><h3>Holy mollusks</h3></a></li>
+                        <li><a href="#pizza6"><h3>Salami</h3></a></li>
+                    </ul>
 
-                <article>
-                    <h1>Pizza Menu</h1>
+                    <ul>
+                        <h1>Drinks Category</h1>
+                        <li><a href="#drinks1"><h3>Coke</h3></a></li>
+                        <li><a href="#drinks2"><h3>Burn</h3></a></li>
+                        <li><a href="#drinks3"><h3>Basilic lemonade</h3></a></li>
+                        <li><a href="#drinks4"><h3>Rich juice</h3></a></li>
+                    </ul>
+
+                </div>
+                
+                <article class="pizzaImg" id="pizza1">
                     <div class="pizza1-img">
-                    <img src="https://buddhapizza.od.ua/storage/products/CkKZCZgXIQNuEooQcL0hynpSn6zrX68HGq7TQLD0.jpeg" alt="Premium cheese">
-                    </div>
-                    <span>₱380</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>Premium cheese</h2>
-                    <p>Italian flour, whole tomato sauce, mozzarella, salmon, tomatoes, spinach, dormula, garlic, lemon, pine nut, olives, oregano.</p>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
-                </article>
-
-                <article>
-                    <div class="pizza2-img">
                     <img src="https://buddhapizza.od.ua/storage/products/kJQkPbUDxEA8uKasK3WLgB4goag8bC6a8ZSjIHnv.jpeg" alt="Multi meat">
                     </div>
-                    <span>₱370</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>Multi meat</h2>
-                    <p>Italian flour, whole tomato sauce, mozzarella, beef, bougainvillea, pepperoni, hunting sausages, bell peppers, Crimean onions, barbecue sauce, oregano.</p>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
-                </article>
-
-                <article>
-                    <div class="pizza3-img">
-                    <img src="https://buddhapizza.od.ua/storage/products/jgaXh2A4jVwLTXkTKBDIgFHZkgm06YF3g3Sva78a.jpeg" alt="With salmon and spinach">
-                    </div>
-                    <span>₱500</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>With salmon and spinach</h2>
-                    <p>Italian flour, whole tomato sauce, mozzarella, salmon, tomatoes, spinach, dormula, garlic, lemon, pine nut, olives, oregano.</p>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
-                </article>
-
-                <article>
-                    <div class="pizza4-img">
-                    <img src="https://buddhapizza.od.ua/storage/products/nDyr9frV13kYv8N1tWAv0hkK12QBORPIB0ySz6Nr.jpeg" alt="Marrakech">
-                    </div>
-                    <span>₱450</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>Marrakech</h2>
-                    <p>Italian flour, truffle sauce, mozzarella, duck fillet (su-type), figs, brie, almonds, pomegranate sauce.</p>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
-                </article>
-
-                <article>
-                    <div class="pizza5-img">
-                    <img src="https://buddhapizza.od.ua/storage/products/NwTuoBDe5wTojPN1RKtZR961YnFL65gQXBAaxdyr.jpeg" alt="Holy mollusks">
-                    </div>
-                    <span>₱380</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>Holy mollusks</h2>
-                    <p>Italian flour, cream sauce, mozzarella, shrimp, mussels, avocado, arugula, secret sauce.</p>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
                 </article>
                 
                 <article>
-                  <div class="pizza6-img">
-                  <img src="https://buddhapizza.od.ua/storage/products/kzBGWLG7WJDQ1PxYRBmdFyVhETHJrcWnJgUTbO39.jpeg">
-                  </div>
-                  <span>₱250</span>
-                  <i class='bx bx-cart' ></i><br>
-                  <h2>Salami</h2>
-                  <p>Italian flour, mozzarella, sauce from whole tomatoes, salami premium, oregano.</p>
-                  <a href="Orderpage.html">
-                  <button>Order Now</button></a>
-                </article>
-                
-                <article>
-                  <h1>Drinks Menu</h1>
-                  <figure>
-                    <img src="https://buddhapizza.od.ua/storage/products/VZim4KtGgiAHX22b6B5AIzsmB8DBH9AHmN0QTpuU.jpeg" alt="Coke"/>
-                      <figcaption>
-                          <span>₱59</span>
-                          <i class='bx bx-cart' ></i><br>
-                          <h2>Coca-Cola</h2>
-                          <a href="Orderpage.html">
-                          <button>Order Now</button></a>
-                      </figcaption>
-                  </figure>
-              </article>
+                    <div class="pizza-info">
+                      <div class="pizza-addons">
+                        <h4>Add-ons:</h4>
+                        <ul>
+                          <li><input type="checkbox" name="addons" value="cheese"> Cheese</li>
+                          <li><input type="checkbox" name="addons" value="meat"> Meat</li>
+                          <li><input type="checkbox" name="addons" value="vegetables"> Vegetables</li>
+                        </ul>
+                      </div>
+                  
+                      <div class="order-form">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="0" max="10">
+                        <br>
+                        <label for="amount-due">Amount Due:</label>
+                        <input type="text" id="amount-due" name="amount-due" value="₱0.00" readonly>
+                        <br>
+                        <label for="payment">Payment:</label>
+                        <input type="text" id="paymen" name="payment" value="₱0.00" readonly>
+                        <br>
+                        <label for="-change">Change:</label>
+                        <input type="text" id="change" name="change" value="₱0.00" readonly>
+                        <br>
+                        <button>Order Now</button>
+                      </div>
+                    </div>
+                  </article>                  
 
-              <article>
-                <figure>
-                  <img src="https://buddhapizza.od.ua/storage/products/Y8rprVvVezn4IOLwW5WNi3LaVvxAx4cTDkbWQYiG.jpeg" alt="Burn"/>
-                    <figcaption>
-                        <span>₱56</span>
-                        <i class='bx bx-cart' ></i><br>
-                        <h2>Burn, 0.25</h2>
-                        <a href="Orderpage.html">
-                        <button>Order Now</button></a>
-                    </figcaption>
-                </figure>
-            </article>
-            
-            <article>
-              <figure>
-                <img src="https://buddhapizza.od.ua/storage/products/judoOB5pTzqM0uPanDDlIh3bER0McfA91LnaqYSc.png" alt="Basilic lemonade 0.5l"/>
-                  <figcaption>
-                      <span>₱50</span>
-                      <i class='bx bx-cart' ></i><br>
-                      <h2>Basilic lemonade 0.5l</h2>
-                      <a href="Orderpage.html">
-                      <button>Order Now</button></a>
-                  </figcaption>
-              </figure>
-          </article>
-
-          <article>
-            <figure>
-              <img src="https://buddhapizza.od.ua/storage/products/i1lJAG73gQI0Ii0ctpDXEr4YDQDhTnu9zj0soHTa.jpeg" alt="Rich juice"/>
-                <figcaption>
-                    <span>₱60</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>Rich juice</h2>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
-                </figcaption>
-            </figure>
-        </article>
-        
-        <article>
-            <div class="restricted-img">
-                <img src="https://static.vecteezy.com/system/resources/previews/005/476/277/original/under-18-forbidden-round-icon-sign-illustration-eighteen-or-older-persons-adult-content-18-plus-only-rating-isolated-on-white-background-free-vector.jpg" alt="18+ Restricted Content">
-            </div>
-            
-            <h1>Alcohol Menu</h1>
-            <figure>
-                <div class="img">
-                <img src="https://ph-test-11.slatic.net/p/mdc/7c7e4c126e824f0a70edcf33e36285d2.jpg" alt="Gin"/>
-                </div>
-                <figcaption>
-                    <span>₱120</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>Ginebra San Miguel Gin</h2>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
-                </figcaption>
-            </figure>
-        </article>
-        
-        <article>
-            <figure>
-                <div class="img">
-                <img src="https://manila-wine.com/media/catalog/product/a/l/alfonso-i-light-1l.jpg" alt="Alfonso"/>
-                </div>
-                <figcaption>
-                    <span>₱399</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>Alfonso I Light - 1L</h2>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
-                </figcaption>
-            </figure>
-        </article>
-        
-        <article>
-            <figure>
-                <div class="img">
-                <img src="http://cdn.shopify.com/s/files/1/0260/6877/9066/products/389490_549b186d-3fdf-4055-a839-dd5f42ff17f0.jpg?v=1669946900" alt="Emperador"/>
-                </div>
-                <figcaption>
-                    <span>₱177</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>Emperador Light Brandy 1L</h2>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
-                </figcaption>
-            </figure>
-        </article>
-        
-        <article>
-            <figure>
-                <div class="img">
-                <img src="https://ipcdn.freshop.com/resize?url=https://images.freshop.com/1564405684702543295/be2925e9fe9115c464fb254dccde76d4_large.png&width=512&type=webp&quality=90" alt="San mig"/>
-                </div>
-                <figcaption>
-                    <span>₱43</span>
-                    <i class='bx bx-cart' ></i><br>
-                    <h2>San Miguel Beer Light</h2>
-                    <a href="Orderpage.html">
-                    <button>Order Now</button></a>
-                </figcaption>
-            </figure>
-        </article>
+            </section>
         </main>
 
         <footer>
-            <a href="https://www.facebook.com/SaturnyP/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/49/49354.png" alt="Facebook logo" width="40" height="40"></a><br>
-            <span>&copy; 2023 - Saturny Pizza. - All rights reserved.</span>
+            <span>&copy; 2023 - Saturny Pizza. - All rights reserved.</span><br><br>
+            <a href="https://www.facebook.com/SaturnyP/" target="_blank"><i class='bx bxl-facebook-square bx-tada' alt="Facebook logo"></a></i>
+            <a href="https://instagram.com/jameskrrt?igshid=ZDdkNTZiNTM=" target="_blank"><i class='bx bxl-instagram-alt bx-tada' alt="Instagram logo"></a></i>
+            <a href="https://twitter.com/Jameskrrt" target="_blank"><i class='bx bxl-twitter bx-tada' alt="Twitter logo"></a></i>
         </footer>
-
-        <script>
-            // Get the search input field, search button, search form, and the articles to search
-            const searchInput = document.querySelector('input[type="search"]');
-            const searchButton = document.getElementById('search-button');
-            const searchForm = document.getElementById('search-form');
-            const articles = document.querySelectorAll('article');
-        
-            // Function to perform the search
-            function performSearch(event) {
-                event.preventDefault();
-        
-                // Get the search query and convert to lowercase
-                const query = searchInput.value.toLowerCase();
-        
-                // Loop through the articles and hide those that don't match the query
-                articles.forEach(article => {
-                    const title = article.querySelector('h2').textContent.toLowerCase();
-                    if (title.includes(query)) {
-                        article.style.display = 'block';
-                    } else {
-                        article.style.display = 'none';
-                    }
-                });
-            }
-        
-            // Listen for submit event on the search form
-            searchForm.addEventListener('submit', performSearch);
-        </script>
     </body>
 
 </html>
