@@ -351,7 +351,9 @@
     background-color: var(--main-color);
     border-radius: 40px;
     border: 5px solid black;
-      flex: 1;
+    flex: 1;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .contact-form form {
@@ -365,6 +367,8 @@
 
   .contact-details {
     background-color: var(--main-color);
+    margin-left: 40px;
+    margin-right: 40px;
     width: 50%;
     border-radius: 40px;
     border: 5px solid black;

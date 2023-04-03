@@ -9,15 +9,31 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            // Pizza category click event listener
+            $('.pizza-name').click(function() {
+            var pizzaId = "#" + $(this).closest('.pizza-img').find('img').attr('id');
+            $(pizzaId).toggle();
+            });
+
+            // Drink category click event listener
+            $('.drink-name').click(function() {
+            var drinkId = "#" + $(this).closest('.drink-img').find('img').attr('id');
+            $(drinkId).toggle();
+            });
+        });
+        </script>
     </head>
-    
+     
     <body>
         <header id="top">
             <a href="index.html">
             <h1>Saturny Pizza</h1></a>
             <a href="index.html" class="logo"><img src="logo.png" alt="Saturny Pizza logo"></a>
             <nav>
-                <a href="index.html">Home</a>
+                <a href="index.html">Home</i></a>
                 <a href="menu.html">Menu</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
@@ -26,31 +42,37 @@
 
         <main>
             <section>
-                <div class="menu-coontainer">
+              <div class="menu-container">
                 <div class="pizza-category">
-                    <ul>
-                        <h1>Pizza Category</h1>
-                        <li><a href="#pizza1"><h3>Premium cheese</h3></a></li>
-                        <li><a href="#pizza2"><h3>Multi meat</h3></a></li>
-                        <li><a href="#pizza3"><h3>With salmon and spinach</h3></a></li>
-                        <li><a href="#pizza4"><h3>Marrakech</h3></a></li>
-                        <li><a href="#pizza5"><h3>Holy mollusks</h3></a></li>
-                        <li><a href="#pizza6"><h3>Salami</h3></a></li>
-                    </ul>
+                  <ul>
+                    <li><h2><i class='bx bxs-pizza bx-flashing'>Pizza Category</i></h2></li>
+                    <li><a href="#pizza1"><h3 class="pizza-name">Premium cheese</h3></a></li>
+                    <li><a href="#pizza2"><h3 class="pizza-name">Multi meat</h3></a></li>
+                    <li><a href="#pizza3"><h3 class="pizza-name">With salmon and spinach</h3></a></li>
+                    <li><a href="#pizza4"><h3 class="pizza-name">Marrakech</h3></a></li>
+                    <li><a href="#pizza5"><h3 class="pizza-name">Holy mollusks</h3></a></li>
+                    <li><a href="#pizza6"><h3 class="pizza-name">Salami</h3></a></li>
+                  </ul>
 
                     <ul>
-                        <h1>Drinks Category</h1>
+                        <li><h2><i class='bx bxs-drink bx-flashing'>Drinks Category</i></h2></li>
                         <li><a href="#drinks1"><h3>Coke</h3></a></li>
                         <li><a href="#drinks2"><h3>Burn</h3></a></li>
                         <li><a href="#drinks3"><h3>Basilic lemonade</h3></a></li>
                         <li><a href="#drinks4"><h3>Rich juice</h3></a></li>
                     </ul>
-
                 </div>
                 
                 <article class="pizzaImg" id="pizza1">
                     <div class="pizza1-img">
-                    <img src="https://buddhapizza.od.ua/storage/products/kJQkPbUDxEA8uKasK3WLgB4goag8bC6a8ZSjIHnv.jpeg" alt="Multi meat">
+                        <img src="https://buddhapizza.od.ua/storage/products/CkKZCZgXIQNuEooQcL0hynpSn6zrX68HGq7TQLD0.jpeg" alt="Premium cheese">
+                    </div>
+
+                    <div class="pizza-details">
+                      <h2>Premium cheese</h2>
+                      <p>Italian flour, sauce based on cream and parmesan, mozzarella, DorBlu, parmesan, walnut, cranberry.</p>
+                      <p>₱350</p>
+                      <button>Add to Cart</button>
                     </div>
                 </article>
                 
@@ -73,15 +95,15 @@
                         <input type="text" id="amount-due" name="amount-due" value="₱0.00" readonly>
                         <br>
                         <label for="payment">Payment:</label>
-                        <input type="text" id="paymen" name="payment" value="₱0.00" readonly>
+                        <input type="text" id="payment" name="payment" value="₱0.00" readonly>
                         <br>
-                        <label for="-change">Change:</label>
+                        <label for="change">Change:</label>
                         <input type="text" id="change" name="change" value="₱0.00" readonly>
                         <br>
                         <button>Order Now</button>
                       </div>
                     </div>
-                  </article>                  
+                </article>                  
 
             </section>
         </main>
@@ -89,9 +111,9 @@
         <footer>
             <span>&copy; 2023 - Saturny Pizza. - All rights reserved.</span><br><br>
             <a href="https://www.facebook.com/SaturnyP/" target="_blank"><i class='bx bxl-facebook-square bx-tada' alt="Facebook logo"></a></i>
-            <a href="https://instagram.com/jameskrrt?igshid=ZDdkNTZiNTM=" target="_blank"><i class='bx bxl-instagram-alt bx-tada' alt="Instagram logo"></a></i>
             <a href="https://twitter.com/Jameskrrt" target="_blank"><i class='bx bxl-twitter bx-tada' alt="Twitter logo"></a></i>
+            <a href="https://instagram.com/jameskrrt?igshid=ZDdkNTZiNTM=" target="_blank"><i class='bx bxl-instagram-alt bx-tada' alt="Instagram logo"></a></i>
         </footer>
+        
     </body>
-
 </html>

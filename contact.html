@@ -35,11 +35,11 @@
                 <div class="contact-form">
                     <h3>Comments and Suggestions</h3>
                     <form action="#" method="post">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        <label for="name">Name:
+                        <input type="text" id="name" name="name" placeholder="John Doe" required></label>
                 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                        <label for="email">Email:
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required></label>
                             
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" placeholder="Your message..." required></textarea>
@@ -49,7 +49,8 @@
                 </div>
 
                 <div class="contact-details">
-                    <h3>Address</h3>
+                    <h3>Call us</h3>
+                    <p>Address: Asin, Bayambang, Pangasinan.</p>
                     <p>Email: contact@saturnypizza.com</p>
                     <p>Phone: 09560951744</p>
                     <p>Tel #: 0755235660</p>
@@ -58,31 +59,12 @@
                 </div>
             </section>
         </main>
-
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-            async
-            defer
-        ></script>
-        <script>
-            function initMap() {
-                const location = { lat: 15.827988, lng: 120.441559 }; // Replace with your desired location
-                const map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 15,
-                    center: location,
-                });
-                const marker = new google.maps.Marker({
-                    position: location,
-                    map: map,
-                });
-            }
-        </script>
         
         <footer>
             <span>&copy; 2023 - Saturny Pizza. - All rights reserved.</span><br><br>
             <a href="https://www.facebook.com/SaturnyP/" target="_blank"><i class='bx bxl-facebook-square bx-tada' alt="Facebook logo"></a></i>
-            <a href="https://instagram.com/jameskrrt?igshid=ZDdkNTZiNTM=" target="_blank"><i class='bx bxl-instagram-alt bx-tada' alt="Instagram logo"></a></i>
             <a href="https://twitter.com/Jameskrrt" target="_blank"><i class='bx bxl-twitter bx-tada' alt="Twitter logo"></a></i>
+            <a href="https://instagram.com/jameskrrt?igshid=ZDdkNTZiNTM=" target="_blank"><i class='bx bxl-instagram-alt bx-tada' alt="Instagram logo"></a></i>
         </footer>
 
     </body>
