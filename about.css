@@ -74,6 +74,8 @@
 
   form input[type="submit"]:hover {
     background-color: red;
+    transform: scale(1.2) translateY(10px);
+	  transition: .4s;
   }
 
   label [for="message"] {
@@ -125,29 +127,27 @@
     position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: black;
     z-index: 1;
     display: flex;
-    padding: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }  
+    padding: 10px 40px;
+  } 
     
     nav a {
     padding: 10px 125px;
     text-align: center;
     position: sticky;
-    margin-left: 20px;
+    margin: 10px;
     left: 10px;
     right: center;
-      font-size: 12px;
-      color: black;
-      background: var(--main-color);
-      border-radius: 1rem;
-    }
+    font-size: 10px;
+    color: black;
+    background: var(--main-color);
+    border-radius: 1rem;
+  }
   
     nav a:hover {
-      transform: scale(1.2) translateY(10px);
+      background-color: wheat;
+      transform: scale(1.0) translateY(5px);
       transition: .4s;
       color: navy;
     }
@@ -186,7 +186,6 @@
   
   main h2 {
     font-size: 36px;
-    text-align: center;
     margin-bottom: 30px;
     color: black;
   }
@@ -281,27 +280,55 @@
     text-align: center;
     font-size: 12px;
     }
-  
-    .faq {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
 
     h1 {
       text-align: left;
       margin-top: 30px;
     }
-
-    .faq h1 {
-      text-align: left;
-      margin-top: 20px;
-      font-size: 20px;
+  
+    .faq {
+      max-width: 90%;
+      margin: 0 auto;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+      background-color: var(--main-color);
+      background-size: cover;
     }
-
+    
+    .faq:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      transition: border-color 0.3s ease;
+    }
+    
+    .faq:hover:before {
+      border-color: #000;
+    }
+    
+    .faq h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: left;
+    }
+    
     .faq h3 {
       text-align: center;
+      margin-top: 40px;
+      font-size: 22px;
     }
+    
+    .faq p {
+      margin-top: 20px;
+      font-size: 14px;
+    }    
 
     .circles {
       height: 100;
@@ -316,9 +343,14 @@
     }
 
     .circle {
+      transition: transform 0.3s ease-in-out;
       overflow: hidden;
       font-size: 10px;
       text-align: bottom;
+    }
+
+    .circle:hover {
+      transform: scale(1.1);
     }
 
     .circle img {
@@ -326,12 +358,12 @@
       height: 60%;
       object-fit: cover;
       border-radius: 50%;
+      
     }
 
     .circle h2 {
-      margin-right: 80px;
-      text-align: center;
-      font-size: 14px;
+      margin-right: 50px;
+      font-size: 12px;
     }
 
     p {
@@ -354,11 +386,19 @@
     flex: 1;
     margin-left: 40px;
     margin-right: 40px;
+    height: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contact-form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
   }
 
   .contact-form form {
     margin-left: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   .contact-form h3 {
@@ -372,7 +412,13 @@
     width: 50%;
     border-radius: 40px;
     border: 5px solid black;
-      flex: 1;
+    flex: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contact-details:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
   }
 
   .contact-details h3 {
