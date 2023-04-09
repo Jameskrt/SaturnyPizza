@@ -361,8 +361,9 @@
       
     }
 
-    .circle h2 {
+    .circles h2 {
       margin-right: 50px;
+      text-align: center;
       font-size: 12px;
     }
 
