@@ -168,11 +168,6 @@ footer span {
   margin: 5px;
 }
 
-.pizza-addons, .order-form {
-  flex: 1;
-  padding: 0 10px;
-}
-
 .order-form form {
   display: flex;
   flex-direction: column;
@@ -219,6 +214,19 @@ height: 10px;
   align-items: flex-start;
 }
 
+.menu-container ul li a {
+  display: block;
+  padding: 8px;
+  color: var(--main-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-container ul li a:hover {
+  border-radius: 30px;
+  background-color: var(--main-color);
+  text-decoration: none;
+}
+
 .catText {
   text-align: center;
   font-size: 18;
@@ -232,6 +240,8 @@ height: 10px;
   border-radius: 40px;
   border: 3px solid wheat;
   transition: all 0.3s ease-in-out;
+  padding: 16px;
+  margin-bottom: 50px;
 }
 
 .pizza-category:hover {
@@ -277,7 +287,7 @@ height: 10px;
 }
 
 .pizza-category a:hover {
-  color: red;
+  color: white;
 }
 
 button {
@@ -343,11 +353,19 @@ button:hover {
   transform: translateY(-5px);
 }
 
-
 .pizza-info h2 {
   font-size: 2.5rem;
   text-align: center;
   margin-top: 10px;
+}
+
+/* Scroll-to-top Button */
+.scroll-to-top {
+  font-size: 30px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: none;
 }
 
 /* Adjusted margins for pizza details and add-ons */
@@ -586,3 +604,17 @@ button:hover {
 .pizza-container > * {
   flex-basis: calc(50% - 20px);
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  }
+  
+  main {
+  animation: fadeIn 2s ease-in-out;
+  }
+  

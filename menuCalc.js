@@ -112,3 +112,16 @@ orderBtn.addEventListener("click", function() {
     paymentInput.placeholder = "Insufficient payment amount";
   }
 });
+
+
+
+// Arrow Top
+const scrollToTopButton = document.querySelector('.scroll-to-top');
+        
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+              scrollToTopButton.style.display = 'block';
+            } else {
+              scrollToTopButton.style.display = 'none';
+            }
+          });

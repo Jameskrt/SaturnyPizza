@@ -293,7 +293,7 @@
       border-radius: 10px;
       padding: 20px;
       position: relative;
-      background-color: var(--main-color);
+      background-image: linear-gradient(135deg, var(--main-color) 0%, var(--bg-color) 120%);
       background-size: cover;
     }
     
@@ -381,7 +381,7 @@
   }
 
   .contact-form {
-    background-color: var(--main-color);
+    background-image: linear-gradient(135deg, var(--main-color) 0%, var(--bg-color) 100%);
     border-radius: 40px;
     border: 5px solid black;
     flex: 1;
@@ -403,51 +403,53 @@
   }
 
   .contact-form h3 {
+    text-align: center;
     margin-left: 30px;
   }
 
   .contact-details {
-    background-color: var(--main-color);
-    margin-left: 40px;
-    margin-right: 40px;
+    background-image: linear-gradient(135deg, var(--main-color) 0%, var(--bg-color) 100%);
+    margin: 0 40px;
     width: 50%;
     border-radius: 40px;
     border: 5px solid black;
     flex: 1;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
-
+  
   .contact-details:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   }
-
+  
   .contact-details h3 {
-    margin-left: 50px;
+    text-align: center;
+    padding-top: 20px;
   }
-
+  
   .contact-details p {
     text-align: start;
     margin-left: 100px;
-    margin-top: 50px;
+    padding-bottom: 20px;
   }
-
-  #map {
-    border: 5px solid white;
-    border-radius: 40px;
-    width: 100%;
+  
+  .contact-details iframe {
+    border-radius: 30px;
+    width: calc(100% - 40px);
     height: 300px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+    margin: 50px 20px;
+  }  
 
-  .contact-details img {
-    border: 5px solid white;
-    border-radius: 40px;
-    width: 95%;
-    height: 300px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    }
+    
+    section {
+    animation: fadeIn 2s ease-in-out;
+    }
+    
