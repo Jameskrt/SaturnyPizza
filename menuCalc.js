@@ -117,11 +117,15 @@ orderBtn.addEventListener("click", function() {
 
 // Arrow Top
 const scrollToTopButton = document.querySelector('.scroll-to-top');
-        
-          window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-              scrollToTopButton.style.display = 'block';
-            } else {
-              scrollToTopButton.style.display = 'none';
-            }
-          });
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollToTopButton.style.display = 'block';
+  } else {
+    scrollToTopButton.style.display = 'none';
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
