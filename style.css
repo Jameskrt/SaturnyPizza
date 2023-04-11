@@ -187,7 +187,6 @@ article h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    width: 100%;
 }
 
 figure {
@@ -205,19 +204,37 @@ article img {
 }
 
 figcaption {
+    text-align: center;
+    color: #ff702a;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: #1e1c2a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
     font-size: 12px;
 	margin-right: 20px;
 	font-weight: bold;
-    color: black;
     margin-bottom: 20px;
 }
   
   figure img {
+	margin: 10px;
+	animation: rotate 20s linear infinite;
 	width: 150px;
 	height: 150px;
 	margin-right: 20px;
-	border-radius: 50%;
 	margin-bottom: 10px;
+  }
+
+  /* Add this keyframes rule */
+@keyframes rotate {
+	0% {
+	  transform: rotate(0);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
   }
 
   figure img:hover {
@@ -352,6 +369,11 @@ figcaption {
 	}
   
   .promo-section h2 {
+	background-image: linear-gradient(100deg, var(--bg-color) 0%, var(--main-color) 100%);
+	padding: 10px;
+	border-radius: 30px;
+	border: 2px solid var(--bg-color);
+	background-color: var(--bg-color);
 	font-size: 22px;
 	margin-bottom: 20px;
 	text-align: center;
@@ -369,7 +391,7 @@ figcaption {
 		border-radius: 30px;
 		max-height: 150px;
 		padding: 20px;
-		margin-bottom: 20px;
+		margin-bottom: 18px;
 		transition: all 0.4s ease;
 	}
 
@@ -467,13 +489,19 @@ figcaption {
 
 	/* Countdown Timer */
 .countdown-timer {
+	display: flex;
+    justify-content: center;
 	text-align: center;
 	border-radius: 20px;
-	background-image: linear-gradient(135deg, var(--bg-color) 0%, var(--main-color) 120%);
+	background-color: var(--bg-color);
 	color: #fff;
-	padding: 20px;
+	padding: 30px;
 	font-size: 16px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	color: wheat;
-  }  
+  }
+  
+  .countdown-timer h3 {
+	font-size: 15px;
+  }
 	

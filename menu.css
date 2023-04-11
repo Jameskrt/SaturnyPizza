@@ -129,6 +129,7 @@ footer span {
 /* pizza img */
 
 .pizza1-img img, .pizza2-img img, .pizza3-img img, .pizza4-img img, .pizza5-img img, .pizza6-img img {
+  animation: rotate 30s linear infinite;
   height: 200px;
   width: 200px;
   display: flex;
@@ -137,6 +138,16 @@ footer span {
   justify-content: center;
   margin: 20px 0;
 }
+
+ /* Add this keyframes rule */
+ @keyframes rotate {
+	0% {
+	  transform: rotate(0);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
 
 /* Flexbox layout for pizza-image section */
 
@@ -361,7 +372,7 @@ button:hover {
 
 /* Scroll-to-top Button */
 .scroll-to-top {
-  font-size: 30px;
+  font-size: 27px;
   position: fixed;
   bottom: 50px;
   right: 50px;

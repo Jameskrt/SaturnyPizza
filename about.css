@@ -331,15 +331,15 @@
     }    
 
     .circles {
-      height: 100;
+      height: 100%;
       display: flex;
       justify-content: space-between;
-      max-width: 100%;
-      margin: 0 auto;
+      width: 100%;
       margin-top: 30px;
       font-size: 10px;
       position: relative;
-      margin-left: 100px;
+      border-radius: 30px;
+      background-image: linear-gradient(0deg, var(--main-color) 0%, var(--bg-color) 100%);
     }
 
     .circle {
@@ -350,19 +350,33 @@
     }
 
     .circle:hover {
-      transform: scale(1.1);
+      transform: scale(1.5);
+    }
+
+    .circle:hover img {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
     }
 
     .circle img {
+      margin-left: 30px;
+      margin-top: 30px;
       width: 70%;
-      height: 60%;
+      height: 50%;
       object-fit: cover;
       border-radius: 50%;
-      
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     }
 
     .circles h2 {
-      margin-right: 50px;
+      max-width: 150px;
+      color: white;
+      font-weight: normal;
+      margin: 20px;
+      border-radius: 30px;
+      padding: 10px 20px;
+      background-color: #1e1c2a;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
       text-align: center;
       font-size: 12px;
     }

@@ -58,7 +58,7 @@
 
             <aside class="promo-section">
                 <div class="countdown-timer">
-                    <h3>Special Offer Ends In: </h3>
+                    <h3>Special Offer Ends In</h3>
                     <div id="timer"></div>
                   </div>                  
                 <h2>Promos and Discounts</h2>
@@ -107,7 +107,7 @@
               const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
               const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
           
-              timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+              timerElement.innerHTML = `: ${days}d ${hours}h ${minutes}m ${seconds}s`;
             }
           
             const countdown = setInterval(updateCountdown, 1000);
