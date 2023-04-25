@@ -111,6 +111,10 @@ orderBtn.addEventListener("click", function() {
     alert("Insufficient payment amount!");
     paymentInput.placeholder = "Insufficient payment amount";
   }
+  
+  addOnCheckboxes.forEach(function(checkbox) {
+    checkbox.checked = false;
+  });
 });
 
 

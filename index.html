@@ -16,8 +16,8 @@
             <a href="index.html">
             <h1>Saturny Pizza</h1></a>
             <a href="index.html" class="logo"><img src="logo.png" alt="Saturny Pizza logo"></a>
-            <nav>   
-                <a href="index.html">Home</a>
+            <nav>
+                <a href="index.html" class="active">Home</a>
                 <a href="menu.html">Menu</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
@@ -56,11 +56,7 @@
                 </article>
             </section>
 
-            <aside class="promo-section">
-                <div class="countdown-timer">
-                    <h3>Special Offer Ends In</h3>
-                    <div id="timer"></div>
-                  </div>                  
+            <aside class="promo-section">              
                 <h2>Promos and Discounts</h2>
                 <div class="promo-box">
                     <h3>Monday Madness</h3>
@@ -87,32 +83,5 @@
             <a href="https://twitter.com/Jameskrrt" target="_blank"><i class='bx bxl-twitter bx-tada' alt="Twitter logo"></a></i>
             <a href="https://instagram.com/jameskrrt?igshid=ZDdkNTZiNTM=" target="_blank"><i class='bx bxl-instagram-alt bx-tada' alt="Instagram logo"></a></i>
         </footer>
-        
-        <script>
-            const endDate = new Date('2023-05-01T00:00:00'); // Set the end date for your promotion
-            const timerElement = document.getElementById('timer');
-          
-            function updateCountdown() {
-              const now = new Date();
-              const remainingTime = endDate - now;
-          
-              if (remainingTime <= 0) {
-                timerElement.innerHTML = 'The promotion has ended.';
-                clearInterval(countdown);
-                return;
-              }
-          
-              const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-              const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-              const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-          
-              timerElement.innerHTML = `: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-            }
-          
-            const countdown = setInterval(updateCountdown, 1000);
-            updateCountdown();
-          </script>          
-
     </body>                
 </html>
