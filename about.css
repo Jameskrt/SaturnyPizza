@@ -120,6 +120,34 @@
     .logo {
     margin: 10px;
   }
+
+  .announcement-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    }
+    
+    .announcement {
+    display: inline-block;
+    animation: marquee-first-half 10s linear infinite forwards;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+    background-color: orangered;
+    border-radius: 5px;
+    }
+    
+    @keyframes marquee-first-half {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
   
   /* Navigation */
   
@@ -312,6 +340,7 @@
       position: relative;
       border-radius: 30px;
       background-color: wheat;
+      height: 300px;
     }
     
     .circle {
@@ -320,7 +349,6 @@
       align-items: center;
       text-decoration: none;
       color: inherit;
-      transition: transform 0.3s ease;
       width: 150px;
       margin-top: 20px;
       padding: 10px;
@@ -331,7 +359,7 @@
       width: 100%;
       height: 100%;
       max-width: 100%;
-      max-height: 50%;
+      max-height: 40%;
       object-fit: cover;
       border-radius: 50%;
       margin-bottom: 10px;
@@ -343,7 +371,6 @@
       color: black;
       margin: 0;
       margin-top: 10px;
-      margin-bottom: 10px;
       font-weight: bolder;
       font-size: 12px;
     }
@@ -354,9 +381,9 @@
       border-radius: 30px;
       padding: 10px;
       background-color: orangered;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       margin: 10px 0 0 0;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
       font-size: 12px;
     }    
 

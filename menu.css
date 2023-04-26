@@ -9,22 +9,17 @@
 }
 
 :root{
-  --main-color:#ff702a;
-  --text-color:#fff;
   --bg-color:#1e1c2a;
-  --big-font:5rem;
-  --h2-font:2.25rem;
-  --p-font:0.9rem;
 }
 
 ::selection{
-  background: var(--main-color);
-  color: #fff;
+  background: orangered;
+  color: white;
 }
 
 body {
   scroll-behavior: smooth;
-  color: var(--text-color);
+  color: white;
   background: var(--bg-color);
   overflow-x: hidden;
 }
@@ -39,7 +34,7 @@ header {
 	top: 0;
 }
   
-  header h1 {
+header h1 {
 	font-size: 34px;
 	margin-bottom: 50px;
 	color: orangered;
@@ -48,13 +43,41 @@ header {
 	position: fixed;
 }
   
-  header img {
+header img {
 	width: 120px;
 	border-radius: 50%;
+}
+  
+.logo {
+	margin: 10px;
+}
+
+.announcement-container {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
   }
   
-  .logo {
-	margin: 10px;
+  .announcement {
+	display: inline-block;
+	animation: marquee-first-half 10s linear infinite forwards;
+	color: white;
+	font-size: 16px;
+	padding: 5px 10px;
+	background-color: orangered;
+	border-radius: 5px;
+  }
+  
+  @keyframes marquee-first-half {
+	0% {
+	  transform: translateX(100%);
+	}
+	100% {
+	  transform: translateX(-100%);
+	}
 }
 
 /* Navigation */
@@ -79,21 +102,21 @@ nav {
 	text-decoration: none;
 }
 
-  nav a.active {
+nav a.active {
 	background-color: wheat;
 }
 
 footer {
   bottom: 0;
   background-color: #333;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 10px;
-  color: var(--main-color);
+  color: orangered;
 }
 
 footer i {
-  color: var(--main-color);
+  color: orangered;
   font-size: 40px;
   margin-right: 30px;
 }
@@ -103,7 +126,7 @@ footer span {
   font-size: 12px;
 }
 
-/* pizza img */
+/* Pizza Image */
 
 .pizza1-img img, .pizza2-img img, .pizza3-img img, .pizza4-img img, .pizza5-img img, .pizza6-img img {
   animation: rotate 30s linear infinite;
@@ -116,6 +139,7 @@ footer span {
 }
 
  /* Add this keyframes rule */
+
  @keyframes rotate {
 	0% {
 	  transform: rotate(0);
@@ -123,9 +147,7 @@ footer span {
 	100% {
 	  transform: rotate(360deg);
 	}
-  }
-
-/* Flexbox layout for pizza-image section */
+}
 
 /* Border for the details below the image */
 .pizza-details {
@@ -149,7 +171,7 @@ footer span {
 }
 
 .pizza-details p {
-  color: #000;
+  color: black;
   font-weight: bold;
   font-size: 12px;
   margin: 5px;
@@ -249,7 +271,7 @@ article img {
 }
 
 .pizza-category a {
-  color: var(--main-color);
+  color: orangered;
   text-decoration: none;
 }
 
