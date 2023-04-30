@@ -1,4 +1,4 @@
-/* Global Styles */
+  /* Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,11 +12,6 @@
   --bg-color:#1e1c2a;
 }
 
-::selection{
-  background: orangered;
-  color: white;
-}
-
 body {
   scroll-behavior: smooth;
   color: white;
@@ -24,7 +19,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Header */
+  /* Header */
 
 header {
 	z-index: 1;
@@ -41,6 +36,7 @@ header h1 {
 	left: 15%;
 	margin-top: 40px;
 	position: fixed;
+  position: absolute;
 }
   
 header img {
@@ -59,19 +55,19 @@ header img {
 	overflow: hidden;
 	white-space: nowrap;
 	text-align: center;
-  }
+}
   
-  .announcement {
+.announcement {
 	display: inline-block;
-	animation: marquee-first-half 10s linear infinite forwards;
+	animation: marquee 10s linear infinite;
 	color: white;
 	font-size: 16px;
 	padding: 5px 10px;
 	background-color: orangered;
 	border-radius: 5px;
-  }
+}
   
-  @keyframes marquee-first-half {
+@keyframes marquee {
 	0% {
 	  transform: translateX(100%);
 	}
@@ -80,17 +76,21 @@ header img {
 	}
 }
 
-/* Navigation */
+  /* Navigation */
 
 nav {
+  position: fixed;
 	position: sticky;
 	top: 0;
 	z-index: 1;
 	display: flex;
 	padding: 10px 50px;
+  overflow: auto;
 }
   
-  nav a {
+nav a {
+  white-space: nowrap;
+  position: absolute;
 	padding: 10px 125px;
 	text-align: center;
 	position: sticky;
@@ -106,127 +106,38 @@ nav a.active {
 	background-color: wheat;
 }
 
-footer {
-  bottom: 0;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  color: orangered;
-}
+  /* Main */
 
-footer i {
-  color: orangered;
-  font-size: 40px;
-  margin-right: 30px;
-}
-
-footer span {
-  text-align: center;
-  font-size: 12px;
-}
-
-/* Pizza Image */
-
-.pizza1-img img, .pizza2-img img, .pizza3-img img, .pizza4-img img, .pizza5-img img, .pizza6-img img {
-  animation: rotate 30s linear infinite;
-  height: 200px;
-  width: 200px;
+.container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-}
-
- /* Add this keyframes rule */
-
- @keyframes rotate {
-	0% {
-	  transform: rotate(0);
-	}
-	100% {
-	  transform: rotate(360deg);
-	}
-}
-
-/* Border for the details below the image */
-.pizza-details {
-  text-align: center;
-  margin: 20px 0;
-  width: 100%;
-  margin-bottom: 20px;
-  border: 2px solid wheat;
-  border-radius: 40px;
+  width: 80%;
+  margin: 50px;
+  margin-top: 0;
   padding: 20px;
+  background-color: white;
+  border-radius: 20px;  
 }
-
-.pizza-details h2 {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: orangered;
-}
-
-.pizza-container h3 {
-  color: var(--bg-color);
-}
-
-.pizza-details p {
-  color: black;
-  font-weight: bold;
-  font-size: 12px;
-  margin: 5px;
-}
-
-.order-form form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.order-form h3 {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
-
-/* Flexbox layout for drink-image section */
-.drink-img {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Border for the details below the image */
-.drink-details {
-  border-top: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-article img {
-  border-radius: 100%;
-}
-
-/* Style for the pizza category */
 
 .menu-container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   align-items: flex-start;
   position: sticky;
   top: 0;
 }
-
+  
 .menu-container ul li a {
   display: block;
-  padding: 8px;
+  padding: 7px;
   color: orangered;
 }
-
+  
 .catText {
   margin-top: 40px;
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 18;
   color: orangered;
 }
 
@@ -279,6 +190,90 @@ article img {
   color: white;
 }
 
+  /* Pizza Image */
+
+.pizza1-img img, .pizza2-img img, .pizza3-img img, .pizza4-img img, .pizza5-img img, .pizza6-img img {
+  animation: rotate 30s linear infinite;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@keyframes rotate {
+	0% {
+	  transform: rotate(0);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+}
+
+  /* Border for the details below the image */
+
+.pizza-details {
+  text-align: center;
+  margin: 20px 0;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 2px solid wheat;
+  border-radius: 40px;
+  padding: 20px;
+}
+
+.pizza-details h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: orangered;
+}
+
+.pizza-container h3 {
+  color: var(--bg-color);
+}
+
+.pizza-details p {
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-form h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+  /* Flexbox layout for drink-image section */
+
+.drink-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  /* Border for the details below the image */
+
+.drink-details {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+article img {
+  border-radius: 100%;
+}
+
+  /* Button */
+
 button {
   background: orangered;
   color: white;
@@ -298,6 +293,8 @@ button:hover {
   color: white;
 }
 
+  /* Check out form */
+
 .pizza-info {
   border: 1px solid wheat;
   border-radius: 40px;
@@ -313,29 +310,52 @@ button:hover {
   flex-direction: column;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  margin: 50px;
-  margin-top: 0;
-  padding: 20px;
-  background-color: white;
-  border-radius: 20px;  
-}
-
 .pizza-info h2 {
   font-size: 2.5rem;
   text-align: center;
   margin-top: 10px;
 }
 
-/* Scroll-to-top Button */
+.order-form label {
+  margin: 5px 0;
+}
+  
+.order-form input {
+  max-width: 90px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+}
+
+.order-form {
+  position: sticky;
+  top: 200px;
+  margin: 20px;
+}
+  
+.order-form button {
+  border-radius: 10px;
+  border: none;
+  background-color: orange;
+  color: white;
+}
+
+.order-form button:hover {
+  background-color: red;
+  color: white;
+}
+  
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+  /* Scroll to the top Button */
+
 .scroll-to-top {
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: black;
+  color: wheat;
   font-size: 11px;
   position: fixed;
   bottom: 50px;
@@ -343,7 +363,7 @@ button:hover {
   display: none;
 }
 
-/* Adjusted margins for pizza details and add-ons */
+  /* Adjusted margins for pizza details and add-ons */
 
 .pizza-addons {
   margin: 20px;
@@ -377,48 +397,7 @@ button:hover {
 
 .pizza-addon-list input[type="checkbox"] {
   margin-right: 5px;
-  }
-  
-  .order-form label {
-    margin: 5px 0;
-  }
-  
-  .order-form input {
-    max-width: 90px;
-    margin: 10px 5px;
-    border-radius: 5px;
-    border: none;
-    font-size: 15px;
-  }
-
-  .order-form {
-    position: sticky;
-    top: 200px;
-    margin: 20px;
-  }
-  
-  .order-form button {
-    border-radius: 10px;
-    border: none;
-    background-color: orange;
-    color: white;
-  }
-
-  .order-form button:hover {
-    background-color: red;
-    color: white;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  li input[type="checkbox"]:checked::before {
-  content: "\2713";
-  font-size: 1.2em;
-  color: green;
-  margin-right: 5px;
-  }
+}
 
   /* New layout for pizza section */
 
@@ -433,154 +412,98 @@ button:hover {
   background-color: white;
   margin: 20px;
   border-radius: 20px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .pizza-card img {
+.pizza-card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
-  }
+}
   
-  .pizza-card-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+.pizza-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
   
-  .pizza-card h3 {
+.pizza-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  }
+}
   
-  .pizza-card p {
+.pizza-card p {
   margin-bottom: 10px;
-  }
+}
   
-  .pizza-card button {
+.pizza-card button {
   margin-top: 10px;
-  }
+}
   
   /* New layout for drink section */
   
-  .drinks-section {
+.drinks-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  }
+}
   
-  .drink-card {
+.drink-card {
   background-color: white;
   margin: 20px;
   border-radius: 40px;
-  }
+}
   
-  .drink-card img {
+.drink-card img {
   width: 100px;
   height: 210px;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
-  }
+}
   
-  .drink-card-content {
+.drink-card-content {
   padding: 20px;
-  }
+}
   
-  .drink-card h3 {
+.drink-card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  }
+}
   
-  .drink-card p {
+.drink-card p {
   margin-bottom: 10px;
-  }
+}
   
-  .drink-card button {
+.drink-card button {
   margin-top: 10px;
-  }
+}
+
+  /* Footer */
+
+footer {
+  bottom: 0;
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+  color: orangered;
+}
+
+footer i {
+  color: orangered;
+  font-size: 40px;
+  margin-right: 30px;
+}
+
+footer span {
+  text-align: center;
+  font-size: 12px;
+}
+
+  /* Fade IN the website */
   
-/* Media Queries */
-
-@media screen and (max-width: 1100px) {
-  nav a {
-  padding: 10px 70px;
-  }
-  .pizza-section {
-    flex-direction: column;
-    align-items: center;
-}
-
-.drink-section {
-    flex-direction: column;
-    align-items: center;
-}
-
-.pizza-card,
-.drink-card {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  header h1 {
-  font-size: 3.5rem;
-  }
-  nav a {
-    padding: 10px 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.pizza-section,
-.drinks-section {
-    flex-direction: column;
-    align-items: center;
-}
-
-.pizza-card,
-.drink-card {
-    width: 90%;
-}
-
-.pizza-img img {
-    height: 120px;
-    width: 120px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  header h1 {
-  font-size: 4rem;
-  }
-  .pizza-card,
-  .drink-card {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .pizzaImg {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 2rem;
-  }
-}
-
-.pizza-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-.pizza-container > * {
-  flex-basis: calc(50% - 20px);
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
